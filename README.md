@@ -1,5 +1,5 @@
 # Molph4
-## Automated Validation pharmacophore model
+##Automated Validation pharmacophore model
 - This package use results from MOE pharmacophore model screening (*txt, *csv)
 - Automation select best pharmacophore model to optimize
 ![screenshot](./Data/Raw_result_png/cover7.png)
@@ -12,6 +12,27 @@ This module requires the following modules:
 
 ## Installation
 Clone this repository to use
+
+## Download the data and pretrained model
+
+Use the following onedrive link:
+
+    Update...
+
+Put everything in onedrive folder to "Data" folder:
+
+    
+Finally the folder structure should look like this:
+
+    Molph4 (project root)
+    |__  README.md
+    |__  ph4
+    |__  prog_vae
+    |__  Data
+    |__  |__ data... (downloaded from onedrive)
+    |    |__ results..
+    |    
+    |......
 ## Usage
 
 ```python
