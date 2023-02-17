@@ -48,7 +48,9 @@ class pharmacophore_validation:
         if self.figsize == None:
             pass
         else:
-            plt.figure(figsize = self.figsize)
+            fig = plt.figure(figsize = self.figsize)
+            background_color = "#F0F6FC"
+            fig.patch.set_facecolor(background_color)
         sns.set()
        
         
@@ -211,8 +213,9 @@ class pharmacophore_validation:
         score_list - array of experimental scores.
         """
         # Plot figure
-        sns.set('talk', 'whitegrid', 'dark', font_scale=1.5,
-        rc={"lines.linewidth": 2, 'grid.linestyle': '--'})
+        
+        sns.set('talk', 'whitegrid', 'dark', font_scale=1,
+        rc={"lines.linewidth": 1, 'grid.linestyle': '--'})
         #plt.figure()
         lw = 2
         plt.plot(self.fpr, self.tpr, 
@@ -222,8 +225,8 @@ class pharmacophore_validation:
         plt.ylim([0.0, 1.05])
         plt.xlabel('False Positive Rate', fontsize = 16, weight = 'semibold')
         plt.ylabel('True Positive Rate', fontsize = 16, weight = 'semibold')
-        plt.title('Receiver operating characteristic', fontsize = 24, weight = 'semibold')
-        plt.legend(loc="lower right")
+        plt.title('Roc Curve', fontsize = 20, weight = 'semibold')
+        plt.legend(loc="lower right", fontsize = 10)
         #plt.plot()
         
     def plot_precision_recall_curve(self):
@@ -243,7 +246,8 @@ class pharmacophore_validation:
         plt.xlabel('False Positive Rate', fontsize = 16, weight = 'semibold')
         plt.ylabel('True Positive Rate', fontsize = 16, weight = 'semibold')
         plt.title('Precision Recall Curve', fontsize = 20, weight = 'semibold')
-        plt.legend(loc="lower right")
+        plt.legend(loc="lower right", fontsize = 10)
+        
         #plt.plot()
     
     def plot_roc_pr(self):

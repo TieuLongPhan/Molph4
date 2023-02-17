@@ -37,7 +37,7 @@ class autoph4result:
         
     """
     
-    def __init__(self, path, ref, scores, active, ID, rescore = None, auc_thresh = 0.5):
+    def __init__(self, path, ref, scores, active, ID, rescore = None, auc_thresh = 0.5, figsize = (16,8)):
         self.path = path # path to folder contain result folders (cover5, cover6,...)
         self.ref = ref # active + decoy
         self.active = active
@@ -45,6 +45,7 @@ class autoph4result:
         self.ID = ID
         self.rescore = rescore
         self.auc_thresh = auc_thresh
+        self.figsize = figsize
     
     def compare_model(self, path, data):
         os.chdir(path)
@@ -55,7 +56,10 @@ class autoph4result:
         #print(data_name)
 
 
-        fig = plt.figure(figsize = (16,8))
+      
+        fig = plt.figure(figsize = self.figsize)
+        background_color = "#F0F6FC"
+        fig.patch.set_facecolor(background_color)
         table = pd.DataFrame()
         for i in data_name:
             data = pd.read_csv(f"{i}.txt")
