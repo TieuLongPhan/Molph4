@@ -11,7 +11,7 @@ This module requires the following modules:
 - [scikit-learn](https://scikit-learn.org/stable/)
 
 ## Installation
-To do...
+Clone this repository to use
 ## Usage
 
 ```python
