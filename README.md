@@ -1,5 +1,5 @@
 # Molph4
-##Automated Validation pharmacophore model
+## Automated Validation pharmacophore model
 - This package use results from MOE pharmacophore model screening (*txt, *csv)
 - Automation select best pharmacophore model to optimize
 ![screenshot](./Data/Raw_result_png/cover7.png)
